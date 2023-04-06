@@ -1,4 +1,5 @@
 import React from 'react';
+import './Cart.css';
 
 
 const Cart = ({cart, handleRemoveFromCart}) => {
@@ -15,9 +16,10 @@ const Cart = ({cart, handleRemoveFromCart}) => {
 
     return (
         <div>
-            <h2>order summary {cart.length}</h2>
+            <h2 className={cart.length === 1 ? 'blue' : 'red'}>order summary {cart.length}</h2>
+            <p className={`bold bordered ${cart.length === 3 ? 'yellow' : 'purple'}`}>something</p>
             
-                {cart.length> 2 ? <span>aro kino</span> : <span>fokira</span>}
+                {cart.length> 2 ? <span className='purple'>aro kino</span> : <span>fokira</span>}
             
             {message}
             {
